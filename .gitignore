@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Generated pipeline artifacts (the durable run log stays versioned)
+workspace/outs/*
+!workspace/outs/00_run_log.md
+
+# _archive/ is frozen LOCAL history (reviews + run snapshots) — never tracked, never pushed
+_archive/
+
+# Raw material is per-run local content (archived with each sample; never tracked)
+workspace/raw/*
+!workspace/raw/.gitkeep

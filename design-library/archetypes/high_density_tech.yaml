@@ -1,0 +1,21 @@
+name: high_density_tech
+style: High-Density Tech
+tone: technical
+visual_identity:
+  typography: monospace_accents
+  density: high
+  structure: bento_grid
+  content: multi_level_comparison
+best_for:
+  - architecture_review
+  - deep_dive
+  - tech_report
+layout_preferences:
+  - card_grid_4_to_6
+  - comparison_table
+  - flow_diagram
+palette:
+  background: "#0D1117"
+  primary: "#58A6FF"
+  accent: "#3FB950"
+  warning: "#D29922"

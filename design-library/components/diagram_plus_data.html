@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+  ics_kys_style — component: diagram_plus_data
+  Layered stack / flow + side explanation panel. Used for: 4-tier
+  architecture, RSI loop steps, 4-layer revenue stack, sandbox flow.
+  Variants (pick in render):
+    A) architecture — 4 horizontal layers (L1..L4) + right navy panel
+    B) flow        — step cards joined by arrows, loop tag below
+    C) rocket      — ascending layer bars with right-aligned margin %
+  Adaptation: keep palette; choose variant per story; adjust bar widths.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+html { background: #F2F2F2; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F2F2F2; font-family: Arial, sans-serif; display: flex;
+}
+.col { display: flex; flex-direction: column; width: 100%; height: 100%; padding: 26pt 40pt 16pt 40pt; box-sizing: border-box; }
+.kicker { color: #E8A33D; font-size: 11pt; font-weight: bold; letter-spacing: 2pt; margin: 0 0 8pt 0; }
+h1 { color: #003366; font-size: 21pt; font-weight: bold; margin: 0 0 14pt 0; line-height: 1.2; }
+.stack { display: flex; }
+.left { width: 430pt; margin-right: 20pt; }
+.layer { display: flex; align-items: center; background: #FFFFFF; border: 1.5pt solid #003366; border-radius: 6pt; padding: 8pt 14pt; margin-bottom: 7pt; }
+.layer .lv { color: #E8A33D; font-size: 13pt; font-weight: bold; width: 52pt; margin: 0; }
+.layer .lt { color: #003366; font-size: 12pt; font-weight: bold; width: 156pt; margin: 0; }
+.layer .ld { color: #003366; font-size: 9pt; margin: 0; }
+.layer.top { border-color: #27AE60; }  .layer.top .lv { color: #27AE60; }
+.right { width: 210pt; background: #003366; border-radius: 8pt; padding: 14pt 16pt; box-sizing: border-box; }
+.right p { color: #FFFFFF; font-size: 10.5pt; margin: 0 0 8pt 0; line-height: 1.4; }
+.right b { color: #E8A33D; }
+.foot { margin: 8pt 0 0 0; }
+.foot p { color: #8090A5; font-size: 8pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="col">
+  <p class="kicker">THE ARCHITECTURE</p>
+  <h1>One Name: Four Layers, Three Engines</h1>
+  <div class="stack">
+    <div class="left">
+      <div class="layer top"><p class="lv">L4</p><p class="lt">Top / crown layer</p><p class="ld">one-line role</p></div>
+      <div class="layer"><p class="lv">L3</p><p class="lt">Governance layer</p><p class="ld">one-line role</p></div>
+      <div class="layer"><p class="lv">L2</p><p class="lt">Domain engines</p><p class="ld">list the 2–3 engines here</p></div>
+      <div class="layer"><p class="lv">L1</p><p class="lt">Context base</p><p class="ld">one-line role</p></div>
+    </div>
+    <div class="right">
+      <p><b>One line for the big idea.</b></p>
+      <p>Two supporting lines on the selling point of the structure.</p>
+      <p>Final line on the constraint the structure satisfies.</p>
+    </div>
+  </div>
+  <div class="foot"><p>Source: … | Company | Confidential</p></div>
+</div>
+</body>
+</html>

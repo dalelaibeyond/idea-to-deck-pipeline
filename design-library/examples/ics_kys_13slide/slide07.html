@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+html { background: #F2F2F2; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F2F2F2; font-family: Arial, sans-serif; display: flex;
+}
+.col { display: flex; flex-direction: column; width: 100%; height: 100%; padding: 26pt 40pt 16pt 40pt; box-sizing: border-box; }
+.kicker { color: #E8A33D; font-size: 11pt; font-weight: bold; letter-spacing: 2pt; margin: 0 0 8pt 0; }
+h1 { color: #003366; font-size: 21pt; font-weight: bold; margin: 0 0 14pt 0; line-height: 1.2; }
+.stack { display: flex; }
+.left { width: 430pt; margin-right: 20pt; }
+.layer { display: flex; align-items: center; background: #FFFFFF; border: 1.5pt solid #003366; border-radius: 6pt; padding: 8pt 14pt; margin-bottom: 7pt; }
+.layer .lv { color: #E8A33D; font-size: 13pt; font-weight: bold; width: 52pt; margin: 0; }
+.layer .lt { color: #003366; font-size: 12pt; font-weight: bold; width: 156pt; margin: 0; }
+.layer .ld { color: #003366; font-size: 9pt; margin: 0; }
+.layer.rsi { border-color: #27AE60; }
+.layer.rsi .lv { color: #27AE60; }
+.layer.gate { border-color: #003366; }
+.right { width: 210pt; background: #003366; border-radius: 8pt; padding: 14pt 16pt; box-sizing: border-box; }
+.right p { color: #FFFFFF; font-size: 10.5pt; margin: 0 0 8pt 0; line-height: 1.4; }
+.right b { color: #E8A33D; }
+.foot { margin: 8pt 0 0 0; }
+.foot p { color: #8090A5; font-size: 8pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="col">
+  <p class="kicker">THE ARCHITECTURE</p>
+  <h1>One Private Platform: Four Layers, Three Engines</h1>
+  <div class="stack">
+    <div class="left">
+      <div class="layer rsi"><p class="lv">L4</p><p class="lt">RSI Loop</p><p class="ld">Learn from every human correction</p></div>
+      <div class="layer gate"><p class="lv">L3</p><p class="lt">Human Gate &amp; Governance</p><p class="ld">Approve · audit · role-based access</p></div>
+      <div class="layer"><p class="lv">L2</p><p class="lt">Three Domain Engines</p><p class="ld">SAP Tax · IT Audit · MDR Triage</p></div>
+      <div class="layer"><p class="lv">L1</p><p class="lt">KYS Context Engine</p><p class="ld">ERP data · logs · permissions · topology</p></div>
+    </div>
+    <div class="right">
+      <p><b>One appliance.</b></p>
+      <p>Entire platform runs on a Dell/HPE private AI server inside the client's own machine room.</p>
+      <p>No data leaves the building — fully DPA 2012 compliant.</p>
+    </div>
+  </div>
+  <div class="foot"><p>Source: KYS 4-tier topology baseline (ICS architecture) | Integrated Computer Systems, Inc. | Confidential</p></div>
+</div>
+</body>
+</html>

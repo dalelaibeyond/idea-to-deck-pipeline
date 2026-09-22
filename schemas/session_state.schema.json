@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Session State (optional metadata; progress is derived from artifacts, never maintained here)",
+  "type": "object",
+  "required": ["session_id", "started_at", "completed_at"],
+  "properties": {
+    "session_id": { "type": "string", "pattern": "^deck_\\d{8}_\\d{3}$" },
+    "started_at": { "type": "string", "format": "date-time" },
+    "completed_at": { "type": ["string", "null"], "format": "date-time" },
+    "target_format": { "type": "string", "enum": ["pptx", "html"] }
+  }
+}

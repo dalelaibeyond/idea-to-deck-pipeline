@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+html { background: #F2F2F2; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F2F2F2; font-family: Arial, sans-serif; display: flex;
+}
+.col { display: flex; flex-direction: column; width: 100%; height: 100%; padding: 26pt 40pt 16pt 40pt; box-sizing: border-box; }
+.kicker { color: #27AE60; font-size: 11pt; font-weight: bold; letter-spacing: 2pt; margin: 0 0 8pt 0; }
+h1 { color: #003366; font-size: 20pt; font-weight: bold; margin: 0 0 16pt 0; line-height: 1.2; }
+.compare { display: flex; }
+.panel { width: 310pt; border-radius: 8pt; padding: 14pt 16pt; box-sizing: border-box; }
+.panel h2 { font-size: 13pt; font-weight: bold; margin: 0 0 8pt 0; }
+.before { background: #F2F2F2; border: 1.5pt solid #8090A5; margin-right: 16pt; }
+.before h2 { color: #8090A5; }
+.after { background: #FFFFFF; border-top: 5pt solid #27AE60; }
+.after h2 { color: #27AE60; }
+.big1 { color: #8090A5; font-size: 22pt; font-weight: bold; margin: 0 0 4pt 0; }
+.big2 { color: #27AE60; font-size: 22pt; font-weight: bold; margin: 0 0 4pt 0; }
+.tag { color: #003366; font-size: 9.5pt; margin: 0 0 6pt 0; }
+ul { color: #003366; font-size: 9.5pt; margin: 4pt 0 0 14pt; padding: 0; line-height: 1.3; }
+.band { display: flex; margin-top: 12pt; }
+.metric { background: #FFFFFF; border-left: 5pt solid #27AE60; border-radius: 5pt; padding: 8pt 14pt; margin-right: 14pt; width: 205pt; box-sizing: border-box; }
+.metric .m { color: #27AE60; font-size: 18pt; font-weight: bold; margin: 0; }
+.metric .d { color: #003366; font-size: 9.5pt; margin: 2pt 0 0 0; }
+.foot { margin: auto 0 0 0; }
+.foot p { color: #8090A5; font-size: 8pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="col">
+  <p class="kicker">ENGINE 1 · SAP + AI</p>
+  <h1>SAP + AI: Tax Work in 30 Seconds — Penalties to Zero</h1>
+  <div class="compare">
+    <div class="panel before">
+      <p class="big1">12–15 min</p>
+      <h2>Before — by hand</h2>
+      <p class="tag">Finance staff cross-check tax IDs, PO and invoices manually, then post directly to SAP with no safety buffer.</p>
+      <ul><li>Manual TIN &amp; rate checks per invoice</li><li>25% surcharge + interest penalty risk</li><li>High error and backlog exposure</li></ul>
+    </div>
+    <div class="panel after">
+      <p class="big2">≈30 sec</p>
+      <h2>After — KYS agent</h2>
+      <p class="tag">AI reads the invoice, runs two validation chains, and prepares a parked document for one-click human approval.</p>
+      <ul><li>Dual-chain check: PO↔GR↔Invoice + TIN &amp; tax rate</li><li>Zero auto-posting — human always approves</li><li>~85% effort reduction, penalties eliminated</li></ul>
+    </div>
+  </div>
+  <div class="band">
+    <div class="metric"><p class="m">4–6 mo</p><p class="d">client payback on the SAP anchor deal</p></div>
+    <div class="metric"><p class="m">+PHP 3.5–4.5M</p><p class="d">first-year net benefit per client (~$62–80K)</p></div>
+  </div>
+  <div class="foot"><p>Source: ICS engine baseline · BIR Form 2307 economics (calculated) | Integrated Computer Systems, Inc. | Confidential</p></div>
+</div>
+</body>
+</html>

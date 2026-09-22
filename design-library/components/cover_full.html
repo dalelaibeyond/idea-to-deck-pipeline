@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+  ics_kys_style — component: cover_full
+  Full-bleed deep navy cover / section divider. Kicker (gold) → big white
+  title → short subtitle → optional chip strip → footer line.
+  Adaptation: swap title/sub/chips; keep palette + rhythm.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+html { background: #003366; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #003366; font-family: Arial, sans-serif; display: flex;
+}
+.col { display: flex; flex-direction: column; width: 100%; height: 100%; justify-content: center; padding: 0 60pt; box-sizing: border-box; }
+.kicker { color: #E8A33D; font-size: 15pt; font-weight: bold; letter-spacing: 2pt; margin: 0 0 14pt 0; }
+h1 { color: #FFFFFF; font-size: 32pt; font-weight: bold; margin: 0 0 16pt 0; line-height: 1.15; }
+.sub { color: #FFFFFF; font-size: 15pt; margin: 0 0 26pt 0; line-height: 1.4; }
+.strip { display: flex; }
+.chip { margin-right: 10pt; padding: 8pt 16pt; border: 1pt solid #E8A33D; border-radius: 20pt; }
+.chip p { color: #FFFFFF; font-size: 11pt; margin: 0; }
+.foot { position: absolute; left: 60pt; bottom: 22pt; }
+.foot p { color: #B9C6D6; font-size: 8pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="col">
+  <p class="kicker">PLATFORM NAME / SECTION</p>
+  <h1>Big statement line<br>that fits one breath</h1>
+  <p class="sub">One supporting sentence — what this deck proves and for whom.</p>
+  <div class="strip">
+    <div class="chip"><p>PILL 1</p></div>
+    <div class="chip"><p>PILL 2</p></div>
+    <div class="chip"><p>PILL 3</p></div>
+  </div>
+  <div class="foot"><p>Client | Company | Confidential</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+name: ics_kys_style
+style: KYS Executive · Sovereign Metric-Dominant
+tone: authoritative_sovereign
+visual_identity:
+  typography: arial_latin_only            # Arial only; simple clear English, no jargon
+  structure: metric_dominant_executive
+  titles: action_title_conclusion_first
+  emphasis: huge_metric_numbers_on_key_pages
+  contrast: restrained_pain_vs_gain       # red/green only on designated pages
+  language: simple_clear_english
+  covers: full_bleed_dark_navy            # deep #003366 full-bleed cover & section dividers
+derivation:
+  skeleton: mckinsey_consulting           # layout discipline, action titles, source footers
+  accents: exec_120s_hook                 # huge metric numbers, pain/gain, strong close/CTA
+  parent: mckinsey_exec_hybrid            # this style is its Latin-only, metric-first variant
+  rule: authority from skeleton, urgency only from accents
+adaptation_rule:                          # templates are a starting grammar, never constraints
+  components_are_reference: true          # renderer adapts weights/sizes/page-mix per brief
+  narrative_wins: true                    # never let a template override story needs
+  per_brief_adjust: [font_weight, metric_size, bento_columns, page_mix]
+best_for:
+  - 120s executive strategy pitch
+  - sovereign / flagship platform story (e.g. KYS-style product platform)
+  - internal board GTM blueprint
+  - metric-heavy executive deck in English (Latin-only)
+template_kit:
+  base: design-library/components/
+  components: [cover_full, metric_card, three_column_bento, split_compare, diagram_plus_data, timeline, comparison_table]
+  exemplar: design-library/examples/ics_kys_13slide/
+first_validated: deck_20260922_975 (ICS KYS AI Agent Platform, 13 slides)
+palette:
+  primary: "#003366"   # deep navy — covers, page dividers, headers, card top bars
+  accent: "#E8A33D"    # gold — kickers, big metrics, emphasis, navy-page accents
+  pain: "#C0392B"      # use on at most ONE complication page
+  gain: "#27AE60"      # use on designated proof/business-case pages
+  neutral: "#F2F2F2"   # light page backgrounds
+  ink: "#FFFFFF"       # text on navy-only

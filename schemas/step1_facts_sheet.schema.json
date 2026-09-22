@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Step 1 Facts Sheet",
+  "type": "object",
+  "required": ["facts", "assumptions", "goals", "status"],
+  "properties": {
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "claim", "source", "verified"],
+        "properties": {
+          "id": { "type": "string" },
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "verified": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "claim", "confidence"],
+        "properties": {
+          "id": { "type": "string" },
+          "claim": { "type": "string" },
+          "confidence": { "type": "string", "enum": ["Low", "Medium", "High"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "goals": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "rework"]
+    }
+  },
+  "additionalProperties": false
+}

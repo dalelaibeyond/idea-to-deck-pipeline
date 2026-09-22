@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Step 3 Visual Spec",
+  "type": "object",
+  "required": ["theme", "color_palette", "slides_ui", "status"],
+  "properties": {
+    "theme": { "type": "string" },
+    "color_palette": {
+      "type": "object",
+      "required": ["primary", "accent"],
+      "properties": {
+        "primary": { "type": "string", "pattern": "^#([0-9a-fA-F]{6})$" },
+        "accent": { "type": "string", "pattern": "^#([0-9a-fA-F]{6})$" }
+      }
+    },
+    "slides_ui": {
+      "type": "array",
+      "description": "Per-slide layout component mapping, one entry per slide in story_outline.slides",
+      "items": {
+        "type": "object",
+        "required": ["slide_no", "component", "style"],
+        "properties": {
+          "slide_no": { "type": "integer", "minimum": 1 },
+          "component": {
+            "type": "string",
+            "enum": ["metric_card", "split_compare", "three_column_bento", "timeline", "comparison_table", "cover_full", "diagram_plus_data"]
+          },
+          "style": {
+            "type": "object",
+            "properties": {
+              "color_palette": {
+                "type": "object",
+                "required": ["primary", "accent"],
+                "properties": {
+                  "primary": { "type": "string", "pattern": "^#([0-9a-fA-F]{6})$" },
+                  "accent": { "type": "string", "pattern": "^#([0-9a-fA-F]{6})$" }
+                }
+              },
+              "font_pairing": { "type": "string" },
+              "layout_direction": { "type": "string", "enum": ["ltr", "rtl"] }
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "rework"]
+    }
+  }
+}

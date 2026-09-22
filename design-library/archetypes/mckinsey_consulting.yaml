@@ -1,0 +1,20 @@
+name: mckinsey_consulting
+style: McKinsey Consulting
+tone: authoritative
+visual_identity:
+  typography: serif_or_clean_sans
+  structure: pyramid
+  titles: action_title_conclusion_first
+  data: chart_driven_with_source
+best_for:
+  - board_report
+  - strategy_review
+  - business_case
+layout_preferences:
+  - conclusion_plus_data_split
+  - three_part_reasoning
+  - structured_matrix
+palette:
+  primary: "#003366"
+  accent: "#E8A33D"
+  neutral: "#F2F2F2"

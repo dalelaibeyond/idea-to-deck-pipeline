@@ -1,0 +1,21 @@
+name: exec_120s_hook
+style: Executive 120s Hook
+tone: urgent
+visual_identity:
+  structure: conclusion_first
+  emphasis: pain_and_roi
+  pace: elevator_pitch
+  visuals: high_impact
+best_for:
+  - elevator_pitch
+  - executive_fast_decision
+  - urgent_proposal
+layout_preferences:
+  - huge_metric_numbers
+  - pain_vs_gain_contrast
+  - clear_call_to_action
+palette:
+  pain: "#C0392B"
+  gain: "#27AE60"
+  neutral: "#1F2937"
+  accent: "#F59E0B"

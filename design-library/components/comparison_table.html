@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+  ics_kys_style — component: comparison_table
+  Row-based comparison as a DIV GRID (html2pptx does NOT support <table>).
+  Header row = navy fill, white bold text; data rows = white cards with a
+  bottom-border separator (#003366 25% opacity is unsafe → use #8090A5).
+  Adaptation: columns = plain divs with equal widths; accent highlight cell
+  with #E8A33D bold value.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+html { background: #F2F2F2; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F2F2F2; font-family: Arial, sans-serif; display: flex;
+}
+.col { display: flex; flex-direction: column; width: 100%; height: 100%; padding: 26pt 40pt 18pt 40pt; box-sizing: border-box; }
+.kicker { color: #E8A33D; font-size: 11pt; font-weight: bold; letter-spacing: 2pt; margin: 0 0 8pt 0; }
+h1 { color: #003366; font-size: 21pt; font-weight: bold; margin: 0 0 16pt 0; line-height: 1.2; }
+.row { display: flex; }
+.cell { background: #FFFFFF; padding: 10pt 12pt; margin-bottom: 6pt; box-sizing: border-box; }
+.h { background: #003366; border-radius: 4pt 4pt 0 0; }
+.h p { color: #FFFFFF; font-size: 11pt; font-weight: bold; margin: 0; }
+.b p { color: #003366; font-size: 10pt; margin: 0; line-height: 1.3; }
+.b.hl p { color: #E8A33D; font-weight: bold; }
+.c1 { width: 200pt; }
+.c2 { width: 220pt; }
+.c3 { width: 200pt; }
+.row .c1, .row .c2, .row .c3 { margin-right: 6pt; }
+.foot { margin: auto 0 0 0; }
+.foot p { color: #8090A5; font-size: 8pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="col">
+  <p class="kicker">SECTION LABEL</p>
+  <h1>Action-title comparing the alternatives</h1>
+  <div class="row">
+    <div class="cell c1 h"><p>COLUMN A</p></div>
+    <div class="cell c2 h"><p>COLUMN B</p></div>
+    <div class="cell c3 h"><p>COLUMN C</p></div>
+  </div>
+  <div class="row">
+    <div class="cell c1 b"><p>Row item</p></div>
+    <div class="cell c2 b hl"><p>Highlight value</p></div>
+    <div class="cell c3 b"><p>Short value</p></div>
+  </div>
+  <div class="row">
+    <div class="cell c1 b"><p>Row item</p></div>
+    <div class="cell c2 b"><p>Short value</p></div>
+    <div class="cell c3 b"><p>Short value</p></div>
+  </div>
+  <div class="row">
+    <div class="cell c1 b"><p>Row item</p></div>
+    <div class="cell c2 b"><p>Short value</p></div>
+    <div class="cell c3 b"><p>Short value</p></div>
+  </div>
+  <div class="foot"><p>Source: … | Company | Confidential</p></div>
+</div>
+</body>
+</html>

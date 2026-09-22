@@ -1,0 +1,23 @@
+name: mckinsey_exec_hybrid
+style: McKinsey × Executive 120s Hybrid
+tone: authoritative_urgent
+visual_identity:
+  typography: clean_sans_cjk_fallback (Arial + PingFang SC / Microsoft YaHei)
+  structure: pyramid
+  titles: action_title_conclusion_first
+  emphasis: huge_metric_numbers_on_key_pages
+  contrast: restrained_pain_vs_gain (red/green only on designated pages)
+derivation:
+  skeleton: mckinsey_consulting   # layout discipline, palette base, action titles, source notes
+  accents: exec_120s_hook         # metric-card big numbers, pain/gain contrast, strong CTA band
+  rule: authority comes from the skeleton; urgency only from accents — never let accents restyle the skeleton
+best_for:
+  - 120s executive strategy pitch
+  - board-level business case, CJK output
+first_validated: deck_20260919_658 (ICS workflow AI Agent strategy)
+palette:
+  primary: "#003366"
+  accent: "#E8A33D"
+  pain: "#C0392B"    # use on at most ONE complication page
+  gain: "#27AE60"    # use on at most ONE business-case page
+  neutral: "#F2F2F2"

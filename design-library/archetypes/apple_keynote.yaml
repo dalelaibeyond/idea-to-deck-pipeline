@@ -1,0 +1,20 @@
+name: apple_keynote
+style: Apple Keynote
+tone: minimalist
+visual_identity:
+  typography: big_bold_sans
+  whitespace: extreme
+  contrast: cinematic_dark_or_pure_light
+  focus: single_visual_focus
+best_for:
+  - product_launch
+  - vision_talk
+  - keynote
+layout_preferences:
+  - single_image_plus_one_line_quote
+  - full_bleed_image
+  - immersive_cards
+palette:
+  dark: "#0A0A0A"
+  light: "#FFFFFF"
+  accent: "#F5F5F7"

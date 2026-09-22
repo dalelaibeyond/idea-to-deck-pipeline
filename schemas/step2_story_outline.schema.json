@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Step 2 Story Outline",
+  "type": "object",
+  "required": ["framework", "slides", "status"],
+  "properties": {
+    "framework": {
+      "type": "string",
+      "enum": ["SCQA", "Problem-Solution", "Vision-to-Execution", "YC Pitch"]
+    },
+    "slides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slide_no", "type", "title", "core_message", "evidence_ids"],
+        "properties": {
+          "slide_no": { "type": "integer", "minimum": 1 },
+          "type": { "type": "string", "enum": ["COVER", "TITLE", "CONTENT", "METRIC", "COMPARISON", "TIMELINE", "DIAGRAM"] },
+          "title": { "type": "string" },
+          "core_message": { "type": "string" },
+          "evidence_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "rework"]
+    }
+  },
+  "additionalProperties": false
+}
