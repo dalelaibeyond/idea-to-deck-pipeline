@@ -133,9 +133,11 @@ python3 index.py clean            # 或 ./clean.sh [--format html]
 # ② 倾倒素材——不需要整理，越全越好
 cp ~/Desktop/notes.md ~/Downloads/spec.pdf workspace/raw/
 
-# ③ 在任意 CLI Coding Agent（ZCode / Codex / Antigravity…）里启动流水线：
-#    "请作为 Orchestrator，依据 agents/orchestrator/PROMPT.md，
+# ③ 在任意 CLI Coding Agent（ZCode / Codex / Antigravity…）里启动流水线——
+#    短指令：启动（或 开始 / start / go，精确匹配整个消息，见 AGENTS.md 规则 6）
+#    等价完整形式："请作为 Orchestrator，依据 agents/orchestrator/PROMPT.md，
 #     处理 workspace/raw/ 并生成 deck"
+#    流水线永远不会自动启动——只有用户敲出这条显式指令（短/长形式均可）才触发
 
 # ④ 在三个 Gate 处做选择题（Agent 会端上 2–3 个选项 + 推荐理由）
 

@@ -25,3 +25,11 @@ design) are the authoritative docs.
    `python3 index.py reset --from <step>`.
 5. Contract changes go through `schemas/` and must pass
    `python3 tools/validate.py --strict` before commit.
+6. **Pipeline start is manual-only — never auto-start.** A user message that
+   is *exactly* one of `启动` / `开始` / `start` / `go` (case-insensitive,
+   trailing punctuation tolerated) is the sanctioned short form of "Act as
+   the Orchestrator, follow `agents/orchestrator/PROMPT.md`, and process
+   `workspace/raw/`." — start the pipeline on it immediately. Anything
+   else — status questions, repo discussion, editing the workflow itself —
+   must NOT start the pipeline. If `workspace/raw/` has no material when
+   the trigger arrives, report that and ask; do not run an empty pipeline.
