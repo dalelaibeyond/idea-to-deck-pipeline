@@ -4,7 +4,7 @@
 Add one entry per failed run: root cause, affected agent, fix.
 
 ## deck_20260919_658 — renderer fidelity gap (quality failure; validation still passed)
-- Root cause: `tools/pptx_compiler.py` (v0.2) renders title+bullets with a
+- Root cause: `tools/pptx_compiler.py` (stage-1 compiler) renders title+bullets with a
   flat primary-color background and ignores `step3_visual_spec.slides_ui`
   (component mapping, per-slide accents) → compiled deck does not honor the
   declarative spec and is barely readable (dark text on navy).

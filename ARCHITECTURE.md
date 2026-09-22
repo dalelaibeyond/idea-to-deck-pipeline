@@ -1,13 +1,16 @@
 # Idea-to-Deck Pipeline — Architecture
 
 **Living document — the single source of truth for the current architecture.**
-Baseline: **v0.2**, run-ready and validated end-to-end by session `deck_20260919_658`.
+Baseline: **v0.1**, run-ready and validated end-to-end by sessions
+`deck_20260919_658` and `deck_20260922_975` (run snapshots:
+`_archive/sample_20260919_737/`, `_archive/sample_20260922_975/`).
 Design tier: Prompt layer ✅ | Tools layer: local compilers ✅ | Contracts layer: JSON Schema ✅
 History & point-in-time reviews: `_archive/` — **local-only, gitignored, never
 read during pipeline runs** (index: `_archive/README.md`; agent rules: `AGENTS.md`).
-v0.3: retro P1–P5 landed (renderer two-stage render + component fidelity,
-fusion rule, retrieval fallback, production-context verification, append-only
-run log — see git log and `.workflow_memory/`).
+v0.1 features (retro P1–P5, folded into the baseline): renderer two-stage
+render + component fidelity, fusion rule, retrieval fallback,
+production-context verification, append-only run log — see the
+`_archive/sample_*` snapshots and `.workflow_memory/`.
 
 A state-machine-based, multi-agent pipeline that turns raw ideas into visual decks (PPTx or HTML).
 
@@ -237,7 +240,7 @@ guard — the traceability spine).
 The `agents/*/PROMPT.md` files are the single source of truth for each role's
 behavior. This section holds pointers and one-line contracts, **not copies** —
 embedded copies drift from the real prompts (that drift was found and removed
-during the v0.2→v0.3 review cycle).
+during an earlier review cycle).
 
 | Agent | Role | Input (only) | Output | HITL |
 |---|---|---|---|---|
@@ -279,7 +282,7 @@ the scenario and may propose a principled fusion when requirements span two.
 1. **HTML route: Marp (declarative)**
    - Best for CLI agents: fast, beautiful, CSS-customizable, responsive.
    - Agent 4 (LLM leaf node) translates `slides_ui` + design-library presets into `workspace/outs/deck.md`, then compiles with one local command — `npx @marp-team/marp-cli workspace/outs/deck.md -o workspace/outs/final_deck.html` (0 tokens; the old JS middle layer was deleted; a nonzero exit code is a hard failure).
-2. **PPTx native route: two-stage render (v0.3, closes retro E4 / P1)**
+2. **PPTx native route: two-stage render (renderer fidelity, closes retro E4 / P1)**
    - Compatible with office suites; editable afterward.
    - Stage 1 — structural gate: `tools/pptx_compiler.py` reads the three
      artifacts from `workspace/outs/` and applies theme/palette (failures are loud,
@@ -300,7 +303,7 @@ the scenario and may propose a principled fusion when requirements span two.
 
 | Phase   | Runtime                                             | Orchestration                        | State Storage              | Use Case                                  |
 | :------ | :-------------------------------------------------- | :----------------------------------- | :------------------------- | :---------------------------------------- |
-| **v0.2** | OpenCode CLI / Codex CLI / Antigravity             | FS (JSON) + shell scripts + markdown | Local files (`workspace/outs/`)   | Solo fast builds, CLI automation, prompt tuning |
+| **v0.1** | OpenCode CLI / Codex CLI / Antigravity             | FS (JSON) + shell scripts + markdown | Local files (`workspace/outs/`)   | Solo fast builds, CLI automation, prompt tuning |
 | **v0.5** | Python LangGraph / LlamaIndex Workflows            | Native async StateGraph topology     | MemorySaver / Redis        | Web UI, team sharing, multi-session       |
 | **v1.0** | Google GenAI ADK / Semantic Kernel / AutoGen       | Declarative DAG, agent workers, vector store | Postgres + S3/OSS   | Enterprise SaaS, multimodal, private depl |
 
@@ -310,7 +313,7 @@ the scenario and may propose a principled fusion when requirements span two.
 |---|---|---|
 | 1 — Prompt scripting | One mega-prompt, zero fault tolerance | past |
 | 2 — Conversational multi-agent | Agents chat in one context; token burn, hallucination cascade | past (rejected at design time) |
-| 3 — Stateful artifact graph | Deterministic DAG + artifact isolation + typed contracts + HITL gates | **current (v0.2)** |
+| 3 — Stateful artifact graph | Deterministic DAG + artifact isolation + typed contracts + HITL gates | **current (v0.1)** |
 | 4 — Autonomous adaptive ADK | Distributed actors, semantic caching, prompt A/B, full tracing + CI evals | v0.5+ target |
 
 ### 6.2 Migration sketch for v0.5 — *unvalidated design note*

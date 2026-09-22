@@ -32,7 +32,7 @@
   build comparison tables as div grids with per-cell background fills.
 
 ## Rendering
-- v0.2 `tools/pptx_compiler.py` renders title+bullets only and ignores the
+- The stage-1 `tools/pptx_compiler.py` renders title+bullets only and ignores the
   step3 `slides_ui` component mapping. For component fidelity use the
   html2pptx path: one HTML per slide at 720x405pt, palette strictly from
   design-library variables, build via the powerpoint skill scripts.

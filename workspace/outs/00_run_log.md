@@ -7,7 +7,7 @@ file with each run's snapshot). Within a run: **one line per Gate decision,
 one line per retry / circuit-breaker event**; nothing else belongs here —
 non-gate render details are not logged, raise them in conversation instead.
 (Full token/latency telemetry is a v0.5 production-ready requirement, not
-v0.2.)
+v0.1.)
 
 ---
 

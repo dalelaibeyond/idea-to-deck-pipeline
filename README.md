@@ -3,7 +3,7 @@
 把杂乱想法变成可交付演示文稿（PPTX / HTML）的**确定性多 Agent 流水线**：
 LLM 只在叶子节点做认知工作，流程由固定清单驱动，人在三个高杠杆点做选择题。
 
-- 现状：v0.2 基线（首次端到端真实交付验证通过）+ v0.3 改进已落地（retro P1–P5 全部关闭，见 git log 与 `.workflow_memory/`）
+- 现状：v0.1 基线（两次真实端到端交付验证：deck_20260919_658、deck_20260922_975；运行快照见 `_archive/sample_*`，经验沉淀见 `.workflow_memory/`）
 - 深层规格见 `ARCHITECTURE.md`（现状层唯一权威）；历史评审在 `_archive/`（**仅本地，不入 git**，见 AGENTS.md）；经验沉淀在 `.workflow_memory/`
 
 ---
@@ -203,7 +203,7 @@ python3 index.py reset --from step3  # 时间旅行：不满意风格？只重�
 | GAP | Gap（信息缺口） | 事实表中缺数据待填的占位行，写作 `[GAP]` |
 | SCQA | Situation-Complication-Question-Answer | 情境→冲突→问题→答案，麦肯锡叙事框架选项之一 |
 | DoD | Definition of Done | 完成的定义/验收标准（Meta-Learner 复盘产出的要求） |
-| retro | Retrospective | 复盘（如 v0.3 retro：P1–P5 改进项） |
+| retro | Retrospective | 复盘（如 v0.1 retro：P1–P5 改进项） |
 | Gate | 门禁 / 检查点 | 确定性校验环节，本 repo 特指三个 HITL 选择题关卡 |
 
 **项目私有命名（易混淆，一并说明）**
